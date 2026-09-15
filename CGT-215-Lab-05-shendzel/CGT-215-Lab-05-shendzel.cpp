@@ -7,15 +7,15 @@
 
 using namespace std;
 
-char cypher(char letter, vector<char> codeTable) {
+char cypher(char letter, vector<char> codeTable) { //Realized that you need another vector variable to decipher it
 
-    //This is for waht I assume is uppercase
+    //This is for the uppercase
     if (letter >= 65 && letter <= 90) {
         return codeTable[letter - 65];
     }
     else if (letter >= 97 && letter <= 122) {
 
-        char upperLetter = letter - 32;
+        char upperLetter = letter - 32; //I realized that the offset between uppercase and lowercase is 32
 
         char cypherLetter = codeTable[upperLetter - 65];
 
